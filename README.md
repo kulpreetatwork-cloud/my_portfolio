@@ -192,23 +192,6 @@ Or connect your GitHub repo directly at [vercel.com](https://vercel.com)
 
 ---
 
-## 📊 Performance
-
-| Metric | Score |
-|--------|-------|
-| Performance | 90+ |
-| Accessibility | 95+ |
-| SEO | 95+ |
-| Best Practices | 90+ |
-
----
-
-## 📄 License
-
-MIT License - Feel free to use and customize for your own portfolio!
-
----
-
 <div align="center">
 
 **Built with ❤️ by Kulpreet Singh**
