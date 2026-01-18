@@ -1,35 +1,108 @@
-# Kulpreet Singh - Portfolio Website
+<div align="center">
 
-A premium, industry-grade portfolio website built with Next.js 14, TypeScript, and Tailwind CSS featuring the Neo-Gradient design system.
+# ✨ Kulpreet Singh | Portfolio
 
-![Portfolio Preview](./portfolio-preview.png)
+A **premium, industry-grade** portfolio website showcasing my projects, skills, and experience as a Full-Stack Developer.
+
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-my--portfolio-7c3aed?style=for-the-badge)](https://my-portfolio-ten-lime-60.vercel.app/)
+[![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+
+<img src="./public/og-image.png" alt="Portfolio Preview" width="600" />
+
+</div>
+
+---
+
+## 🌟 Live Demo
+
+**🔗 [https://my-portfolio-ten-lime-60.vercel.app/](https://my-portfolio-ten-lime-60.vercel.app/)**
+
+---
+
+## ✨ Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎨 Premium Design
+- **Neo-Gradient** design system
+- Dark/Light theme with smooth transitions
+- Glassmorphism cards with backdrop blur
+- Custom animated cursor (desktop)
+- Floating particles background
+
+</td>
+<td width="50%">
+
+### 🚀 Advanced Animations
+- 3D tilt effects on hover
+- Page transition animations
+- Scroll progress indicator
+- Text reveal & typewriter effects
+- Branded loading screen
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📱 Responsive & Accessible
+- Mobile-first responsive design
+- ARIA labels & semantic HTML
+- Reduced motion support
+- Keyboard navigation
+
+</td>
+<td width="50%">
+
+### 🎮 Fun Easter Eggs
+- Konami code celebration 🎮
+- Type "hire" for a secret message 💼
+- Console welcome messages
+- Sound effects (opt-in)
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| **Framework** | Next.js 15 (App Router) |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS 4 |
+| **Animations** | Framer Motion |
+| **Icons** | Lucide React |
+| **Forms** | Web3Forms (free, no backend) |
+| **Deployment** | Vercel |
+
+---
 
 ## 🚀 Quick Start
 
 ```bash
+# Clone the repository
+git clone https://github.com/kulpreetatwork-cloud/my_portfolio.git
+
+# Navigate to project directory
+cd my_portfolio
+
 # Install dependencies
 npm install
 
 # Start development server
 npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
 ```
 
-Visit [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-## 🎨 Design System
-
-**Neo-Gradient** theme featuring:
-- Deep navy backgrounds (#0a0a0f)
-- Electric violet (#7c3aed) & cyan (#06b6d4) accents
-- Glassmorphism cards with backdrop blur
-- Smooth Framer Motion animations
-- Dark/Light theme toggle with persistence
+---
 
 ## 📁 Project Structure
 
@@ -37,30 +110,32 @@ Visit [http://localhost:3000](http://localhost:3000)
 portfolio-site/
 ├── src/
 │   ├── app/                    # Next.js App Router pages
-│   │   ├── about/              # About page
+│   │   ├── about/              # About page with stats
 │   │   ├── projects/           # Projects listing & detail
 │   │   ├── contact/            # Contact form
-│   │   ├── resume/             # Resume viewer
-│   │   ├── layout.tsx          # Root layout with SEO
-│   │   └── page.tsx            # Home page
+│   │   ├── resume/             # Interactive resume
+│   │   └── layout.tsx          # Root layout with SEO
 │   ├── components/
+│   │   ├── animations/         # Page transitions, text reveals
 │   │   ├── layout/             # Navbar, Footer
-│   │   ├── sections/           # Hero, FeaturedProjects, Skills, CTA
-│   │   ├── ui/                 # ProjectCard, etc.
-│   │   └── animations/         # Framer Motion components
-│   ├── content/                # ⭐ EDIT THESE TO UPDATE CONTENT
-│   │   ├── profile.ts          # Personal info, bio, socials
+│   │   ├── sections/           # Hero, Skills, CTA
+│   │   └── ui/                 # Cards, buttons, effects
+│   ├── content/                # ⭐ Edit these to update content
+│   │   ├── profile.ts          # Personal info & bio
 │   │   ├── projects.ts         # Project details
-│   │   ├── skills.ts           # Skills by category
+│   │   ├── skills.ts           # Technical skills
 │   │   └── education.ts        # Education & certifications
 │   └── lib/                    # Utilities
-├── public/assets/              # Images, resume PDF
-└── README.md
+└── public/
+    ├── assets/                 # Images, resume PDF
+    └── og-image.png            # Social preview image
 ```
 
-## ✏️ Content Editing Guide
+---
 
-### Update Personal Information
+## ✏️ Customization
+
+### Update Personal Info
 Edit `src/content/profile.ts`:
 ```typescript
 export const profile = {
@@ -68,55 +143,44 @@ export const profile = {
   title: "Your Title",
   tagline: "Your tagline",
   email: "your@email.com",
-  // ... more fields
+  // ...
 }
 ```
 
-### Add a New Project
+### Add Projects
 Edit `src/content/projects.ts`:
 ```typescript
-export const projects: Project[] = [
-  {
-    slug: "project-slug",           // URL-friendly name
-    name: "Project Name",
-    summary: "One-line summary",
-    description: "Full description...",
-    role: "Solo Developer",         // or "Team Lead", "Team Member"
-    featured: true,                 // Show on home page
-    tags: ["AI", "Full-Stack"],
-    tech: ["React", "Node.js"],
-    highlights: [
-      "Key achievement 1",
-      "Key achievement 2"
-    ],
-    links: {
-      live: "https://your-demo.com",
-      github: "https://github.com/you/repo"
-    },
-    date: "2024"
-  },
-  // ... more projects
-]
-```
-
-### Update Skills
-Edit `src/content/skills.ts`:
-```typescript
-export const skills = {
-  categories: [
-    { name: "Frontend", skills: ["React", "Next.js", "Tailwind"] },
-    // ... more categories
-  ],
-  highlighted: ["React", "Node.js"]  // Primary skills to emphasize
+{
+  slug: "project-name",
+  name: "Project Name",
+  summary: "One-line summary",
+  featured: true,
+  tech: ["React", "Node.js"],
+  // ...
 }
 ```
 
 ### Replace Assets
-1. **Profile Photo**: Replace `public/assets/My_pic.jpg`
-2. **Resume PDF**: Replace `public/assets/Kulpreet_Singh_Resume_Updated.pdf`
-3. Update the file path in `src/content/profile.ts` if filename changes
+- **Profile Photo**: `public/assets/My_pic.jpg`
+- **Resume PDF**: `public/assets/Kulpreet_Singh_Resume_Updated.pdf`
+- **OG Image**: `public/og-image.png`
 
-## 🌐 Deployment
+---
+
+## 📧 Contact Form Setup
+
+Uses [Web3Forms](https://web3forms.com/) (free, no backend needed):
+
+1. Go to [web3forms.com](https://web3forms.com/)
+2. Create a free access key with your email
+3. Add to `.env.local`:
+   ```
+   NEXT_PUBLIC_WEB3FORMS_KEY=your_access_key
+   ```
+
+---
+
+## 🚀 Deployment
 
 ### Deploy to Vercel (Recommended)
 ```bash
@@ -124,75 +188,20 @@ npm i -g vercel
 vercel
 ```
 
-### Deploy to Netlify
-```bash
-npm run build
-# Deploy the `.next` folder or use Netlify CLI
-```
+Or connect your GitHub repo directly at [vercel.com](https://vercel.com)
 
-### Environment Variables
-Copy `.env.example` to `.env.local` and configure:
+---
 
-```bash
-cp .env.example .env.local
-```
+## 📊 Performance
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `NEXT_PUBLIC_WEB3FORMS_KEY` | Optional | Web3Forms access key for contact form |
-
-## 📧 Contact Form Setup
-
-The contact form uses [Web3Forms](https://web3forms.com/) (free, no backend required):
-
-1. Go to [web3forms.com](https://web3forms.com/)
-2. Enter your email address and click "Create Access Key"
-3. Check your email for the access key
-4. Create `.env.local` and add:
-   ```
-   NEXT_PUBLIC_WEB3FORMS_KEY=your_access_key_here
-   ```
-5. Restart the dev server
-
-**Without Web3Forms**: The form falls back to opening the user's email client with a pre-filled message.
-
-## 🔍 SEO Checklist
-
-- ✅ Dynamic meta titles per page
-- ✅ OpenGraph & Twitter cards
-- ✅ Structured data (JSON-LD Person schema)
-- ✅ Semantic HTML5 elements
-- ✅ Accessible with ARIA labels
-- ✅ Skip-to-content link
-- ✅ Reduced motion support
-
-## 📊 Lighthouse Targets
-
-| Metric | Target |
-|--------|--------|
+| Metric | Score |
+|--------|-------|
 | Performance | 90+ |
 | Accessibility | 95+ |
 | SEO | 95+ |
 | Best Practices | 90+ |
 
-## 🎯 Features
-
-- **Responsive Design**: Works on all devices (360px to 4K)
-- **Dark/Light Theme**: Toggle with localStorage persistence
-- **Project Filtering**: Search and filter by tags
-- **Smooth Animations**: Framer Motion with reduced-motion support
-- **Contact Form**: Web3Forms integration (free) with email fallback
-- **PDF Resume Viewer**: Embedded viewer with download option
-
-## 🛠️ Tech Stack
-
-| Technology | Purpose |
-|------------|---------|
-| Next.js 14 | React framework with App Router |
-| TypeScript | Type safety |
-| Tailwind CSS 4 | Styling |
-| Framer Motion | Animations |
-| Lucide React | Icons |
+---
 
 ## 📄 License
 
@@ -200,4 +209,11 @@ MIT License - Feel free to use and customize for your own portfolio!
 
 ---
 
-Built with ❤️ by Kulpreet Singh
+<div align="center">
+
+**Built with ❤️ by Kulpreet Singh**
+
+[![GitHub](https://img.shields.io/badge/GitHub-kulpreetatwork--cloud-181717?style=flat-square&logo=github)](https://github.com/kulpreetatwork-cloud)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Kulpreet_Singh-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/kulpreet-singh26)
+
+</div>
