@@ -1,8 +1,7 @@
-'use client';
-
 import Link from 'next/link';
-import { Home, ArrowLeft, Search } from 'lucide-react';
+import { Home, Search } from 'lucide-react';
 import { FadeIn } from '@/components/animations/FadeIn';
+import { GoBackButton } from '@/components/ui/GoBackButton';
 
 export default function NotFound() {
     return (
@@ -27,7 +26,7 @@ export default function NotFound() {
                             Page Not Found
                         </h1>
                         <p className="mt-4 text-lg text-[var(--text-secondary)]">
-                            Oops! The page you're looking for doesn't exist or has been moved.
+                            Oops! The page you&apos;re looking for doesn&apos;t exist or has been moved.
                         </p>
 
                         {/* Actions */}
@@ -36,13 +35,7 @@ export default function NotFound() {
                                 <Home size={18} />
                                 Go Home
                             </Link>
-                            <button
-                                onClick={() => window.history.back()}
-                                className="btn-secondary"
-                            >
-                                <ArrowLeft size={18} />
-                                Go Back
-                            </button>
+                            <GoBackButton />
                         </div>
 
                         {/* Quick Links */}
