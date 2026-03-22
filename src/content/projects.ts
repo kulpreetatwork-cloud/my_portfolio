@@ -91,6 +91,40 @@ The application focuses on providing an engaging user experience with features l
             thumbnail: "/assets/Chatpulse.png",
             desktop: "/assets/Chatpulse.png"
         }
+    },
+    {
+        slug: "prepwise",
+        name: "PrepWise",
+        summary: "AI-Powered Mock Interview Platform",
+        description: `A real-time AI voice-powered mock interview platform designed for college students and freshers who want personalized interview preparation to land their dream job. PrepWise features a Zoom-like AI interviewer that speaks, listens, and adapts in real-time, delivering detailed post-interview feedback with actionable insights.
+
+The platform offers 10+ target roles, multiple interview types (Technical, Behavioral, HR, System Design), customizable difficulty levels, and duration options. It includes a community forum with upvote/downvote system, a leaderboard with rankings, a GitHub-style contribution heatmap, advanced analytics, and reusable interview templates — all wrapped in a dark-first UI with glassmorphism design.`,
+        role: "Team Member",
+        featured: true,
+        tags: ["AI", "Full-Stack", "Real-Time", "MERN"],
+        tech: ["React", "Node.js", "Express", "MongoDB", "Groq API", "Socket.IO", "Tailwind CSS", "Framer Motion", "Zustand", "Recharts", "JWT", "Passport.js", "Vite", "Vercel", "Render"],
+        highlights: [
+            "Built real-time AI voice interview system powered by Groq LLM with browser-native Speech Recognition and Synthesis",
+            "Implemented comprehensive interview customization with 10+ roles, multiple types, difficulty levels, and duration options",
+            "Developed detailed AI feedback with scoring, category breakdowns, radar/bar chart visualizations, and PDF report generation",
+            "Created community forum with posts, threaded comments, upvote/downvote system, and category filtering",
+            "Built leaderboard with rankings by Top Scores, Most Interviews, Longest Streaks, and Most Improved",
+            "Implemented GitHub-style contribution heatmap and advanced analytics with performance breakdowns"
+        ],
+        challenges: [
+            "Integrated real-time Socket.IO communication for seamless AI voice interview flow",
+            "Designed dynamic Groq prompt generation that adapts based on user customizations and responses",
+            "Built responsive dark-first UI with glassmorphism design and lazy-loaded routes for performance"
+        ],
+        links: {
+            live: "https://prepwise-blue.vercel.app",
+            github: "https://github.com/kulpreetatwork-cloud/prepwise"
+        },
+        date: "2025",
+        images: {
+            thumbnail: "/assets/Prepwise.png",
+            desktop: "/assets/Prepwise.png"
+        }
     }
 ];
 
